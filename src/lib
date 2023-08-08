@@ -173,7 +173,7 @@ select_remote_version() {
   echo "$versions" | ./src/semver-select -c "$constraint" -n 1 -i -
 }
 
-select_go_version_fom_file() {
+select_go_version_from_file() {
   local go_file_path="$1"
 
   file_name="$(basename "$go_file_path")"
