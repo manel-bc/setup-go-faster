@@ -170,5 +170,5 @@ jobs:
           lowest_version="$(echo -e "$requested_min_version\n$installed_version" | sort -rV | tail -1)"
 
           [[ "$lowest_version" == "$requested_min_version" ]]
-          [[ '${{steps.setup_go_1_13_x.outputs.GOROOT}}' == *"$installed_version"* ]]
-          [[ '${{steps.setup_go_1_13_x.outputs.GOTOOLDIR}}' == *"$installed_version"* ]]
+          [[ '${{steps.setup_go_1_15_from_go_mod.outputs.GOROOT}}' == *"$installed_version"* ]]
+          [[ '${{steps.setup_go_1_15_from_go_mod.outputs.GOTOOLDIR}}' == *"$installed_version"* ]]
